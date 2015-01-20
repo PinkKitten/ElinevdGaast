@@ -1,0 +1,52 @@
+<html>
+<head>
+    <script src="vendor/jquery-1.11.1.js"></script>
+    <script src="vendor/bootstrap.min.js"></script>
+    <script src="vendor/scrollIt.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="styling.css">
+    <script>
+        $(function(){
+          $.scrollIt();
+        });
+    </script>
+</head>
+<body>
+    <div class='nav-container'>
+        <nav>
+            <ul>
+                <li>
+                    <a class='active' data-scroll-nav='0'>About</a>
+                </li>
+                <li>
+                    <a data-scroll-nav='1'>Portfolio</a>
+                </li>
+                <li>
+                    <a data-scroll-nav='2'>Skills</a>
+                </li>
+                <li>
+                    <a data-scroll-nav='3'>Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div id="content">
+        <div data-scroll-index="0" class="page">
+            stuff
+            <!-- <div id="welcome-container">
+                Welcome
+            </div> -->
+        </div>
+        <div data-scroll-index="1" class="page">Recent Work</div>
+        <div data-scroll-index="2" class="page">Options.</div>
+        <div data-scroll-index="3" class="page">Contact</div>
+    </div>
+
+    <div id="footer">
+        <div class="container-footer">
+            Designed by Effi(e)
+        </div>
+    </div>
+</body>
+</html>
