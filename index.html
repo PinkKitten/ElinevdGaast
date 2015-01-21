@@ -46,7 +46,7 @@
             <h2>Recent Work</h2>
             <p>Below are a couple of my most recent projects. I usually have a couple projects ongoing where I try to apply new skills.</p>
             <div id="wedesign" data-toggle="modal" data-target="#wedesignModal">
-                <img src="images/wedesign.png" />
+                <div class="img-container"><img src="images/wedesign.png" /></div>
                 <p class="title">WeDesign</p>
             </div>
             <!-- Modal WeDesign-->
@@ -65,7 +65,7 @@
                             aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                     </button>
-                    <h4 class="modal-title" id="myModalLabel">WeDesign</h4>
+                    <h4 class="modal-title" id="wedesignModalLabel">WeDesign</h4>
                   </div>
                   <div class="modal-body">
                     <div class="modal-img">
@@ -93,13 +93,99 @@
               </div>
             </div>
             
-            <div id="poieo">
-                <img src="images/poieo.png" />
+            <div id="poieo"  data-toggle="modal" data-target="#poieoModal">
+                <div class="img-container"><img src="images/poieo.png" /></div>
                 <p class="title">Poieo</p>
             </div>
-            <div id="cateroids">
-                <img src="images/cateroids.png" />
+            
+            <!-- Modal Poieo-->
+            <div class="modal fade" 
+                 id="poieoModal" 
+                 tabindex="-1" 
+                 role="dialog" 
+                 aria-labelledby="poieoModalLabel" 
+                 aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" 
+                            class="close" 
+                            data-dismiss="modal" 
+                            aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="poieoModalLabel">Poieo</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="modal-img">
+                        <img src="images/poieo.png"/>
+                    </div>
+                    <div class="modal-text">
+                        <p>A todo app inspired by Trello. Ruby on Rails back-end, Backbone.js front-end.</p>
+                        <ul>
+                        <li>Drag and Drop features implemented using jQuery Sortable</li>
+                        <li>Recursive EJS templates to display boards with nested lists and cards</li>
+                        <li>Sorted order of lists and cards persisted to the database</li>
+                    </ul>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                      <a href="">Live Demo</a>
+                      <p class="divider">&oast;</p>
+                      <a href="">GitHub</a>
+                    <button type="button"
+                            class="btn btn-default" 
+                            data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div id="cateroids"  data-toggle="modal" data-target="#cateroidsModal">
+                <div class="img-container"><img src="images/cateroids.png" /></div>
                 <p class="title">CATeroids</p>
+            </div>
+            
+            <!-- Modal CATeroids-->
+            <div class="modal fade" 
+                 id="cateroidsModal" 
+                 tabindex="-1" 
+                 role="dialog" 
+                 aria-labelledby="cateroidsModalLabel" 
+                 aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" 
+                            class="close" 
+                            data-dismiss="modal" 
+                            aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="cateroidsModalLabel">CATeroids</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="modal-img">
+                        <img src="images/cateroids.png"/>
+                    </div>
+                    <div class="modal-text">
+                        <p>100% JavaScript based game played in the browser using HTML5 Canvas drawing </p>
+                        <ul>
+                            <li>Prototypal inheritance to DRY code between the different moving objects</li>
+                        <li>Calculates movement, direction and collision using vector algebra</li>
+                    </ul>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                      <a href="">Live Demo</a>
+                      <p class="divider">&oast;</p>
+                      <a href="">GitHub</a>
+                    <button type="button"
+                            class="btn btn-default" 
+                            data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
         <div data-scroll-index="2" class="page"><h2>Skills</h2>
