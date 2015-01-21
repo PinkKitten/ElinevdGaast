@@ -97,6 +97,7 @@ body {
     margin-right: auto;
     margin-top: 100px;
     padding: 10px;
+    text-align: center;
 }
 
 /*recent word*/
@@ -120,6 +121,13 @@ body {
 p.title {
     text-align: center;
     font-weight: bold;
+}
+
+/*contact*/
+
+#contact-img img {
+    width: 100%;
+    opacity: 0.3;
 }
 
 /*footer*/
