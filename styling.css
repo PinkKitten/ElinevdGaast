@@ -100,7 +100,7 @@ body {
     text-align: center;
 }
 
-/*recent word*/
+/*recent work*/
 
 #wedesign, #poieo, #cateroids {
     width: 250px;
@@ -123,6 +123,34 @@ p.title {
     font-weight: bold;
 }
 
+.modal-img {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.modal-img img {
+    width: 250px;
+}
+
+.modal-footer p, .modal-footer a {
+    display: inline-block;
+    float: left;
+}
+
+.modal-footer a {
+    text-decoration: none;
+    color: black;
+}
+
+.modal-footer a:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.modal-footer p.divider {
+    margin-left: 5px;
+    margin-right: 5px;
+}
 /*contact*/
 
 #contact-img img {

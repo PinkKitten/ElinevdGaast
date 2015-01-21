@@ -44,11 +44,55 @@
         </div>
         <div data-scroll-index="1" class="page">
             <h2>Recent Work</h2>
-            <!-- <p>Below are a couple of my most recent projects. I usually have a couple projects ongoing where I try to apply new skills.</p>
-            <div id="wedesign">
+            <p>Below are a couple of my most recent projects. I usually have a couple projects ongoing where I try to apply new skills.</p>
+            <div id="wedesign" data-toggle="modal" data-target="#wedesignModal">
                 <img src="images/wedesign.png" />
                 <p class="title">WeDesign</p>
             </div>
+            <!-- Modal WeDesign-->
+            <div class="modal fade" 
+                 id="wedesignModal" 
+                 tabindex="-1" 
+                 role="dialog" 
+                 aria-labelledby="wedesignModalLabel" 
+                 aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" 
+                            class="close" 
+                            data-dismiss="modal" 
+                            aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">WeDesign</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="modal-img">
+                        <img src="images/wedesign.png"/>
+                    </div>
+                    <div class="modal-text">
+                        <p>A platform for aspiring designers and fashion lovers to meet, interact, and shop. Ruby on Rails back-end, Backbone.js front-end.</p>
+                        <ul>
+                            <li>Composite (sub)views to add greater functionality and flexibility</li>
+                        <li>Overrides Backbone's default Model#parse method to handle nested data</li>
+                        <li>Built user authentication and RESTful rails API</li>
+                        <li>Integrated Filereader for easy image uploading</li>
+                    </ul>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                      <a href="">Live Demo</a>
+                      <p class="divider">&oast;</p>
+                      <a href="">GitHub</a>
+                    <button type="button"
+                            class="btn btn-default" 
+                            data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
             <div id="poieo">
                 <img src="images/poieo.png" />
                 <p class="title">Poieo</p>
@@ -56,12 +100,28 @@
             <div id="cateroids">
                 <img src="images/cateroids.png" />
                 <p class="title">CATeroids</p>
-            </div> -->
+            </div>
         </div>
-        <div data-scroll-index="2" class="page"><h2>Skills</h2></div>
+        <div data-scroll-index="2" class="page"><h2>Skills</h2>
+            <p>
+                Ruby 
+                Ruby on Rails 
+                JavaScript
+                jQuery
+                Backbone.js
+                SQL
+                Git
+                HTML
+                CSS
+                Twitter Bootstrap
+                RSpec
+                Jasmine
+            </p>
+            <p>Download my resume</p>
+            </div>
         <div data-scroll-index="3" class="page"><h2>Contact</h2>
             <div id="contact-img">
-                <!-- <img src="images/paper-airplane.jpg"> -->
+                <img src="images/paper-airplane.jpg">
             </div>
         </div>
     </div>
