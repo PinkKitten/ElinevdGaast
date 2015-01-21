@@ -13,8 +13,9 @@
     </script>
 </head>
 <body>
-    <div class='nav-container'>
-        <span class="glyphicon glyphicon-align-justify"></span>
+    <span class="glyphicon glyphicon-align-justify" id="menu-bar"></span>
+    <div class='nav-container' id="full-menu">
+        <div class="close-button" id="close-menu"><img src="images/close.svg"></div>
         <nav>
             <ul>
                 <li>
@@ -63,5 +64,22 @@
             Designed by Effi(e)
         </div>
     </div>
+    
+    <script>
+		var menuIcon = document.getElementById('menu-bar');
+        var fullMenu = document.getElementById('full-menu');
+        var closeMenu = document.getElementById('close-menu');
+        
+        menuIcon.onclick = function () {
+            $(menuIcon).hide();
+            // $(fullMenu).show('slide', {directoin: 'right'});
+            $(fullMenu).toggle('slide');
+        };
+        
+        closeMenu.onclick = function () {
+            $(fullMenu).toggle('slide');
+            $(menuIcon).show();  
+        };
+    </script>
 </body>
 </html>
