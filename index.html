@@ -33,7 +33,7 @@
             </ul>
         </nav>
     </div>
-    <div id="content">
+    <div id="content" class='content-wide'>
         <div data-scroll-index="0" class="page">
             <div id="welcome-container">
                 Welcome
@@ -69,16 +69,20 @@
 		var menuIcon = document.getElementById('menu-bar');
         var fullMenu = document.getElementById('full-menu');
         var closeMenu = document.getElementById('close-menu');
+        var $content = $(document.getElementById('content'));
         
         menuIcon.onclick = function () {
             $(menuIcon).hide();
-            // $(fullMenu).show('slide', {directoin: 'right'});
             $(fullMenu).toggle('slide');
+            $content.removeClass('content-wide');
+            $content.addClass('content-small');
         };
         
         closeMenu.onclick = function () {
             $(fullMenu).toggle('slide');
             $(menuIcon).show();  
+            $content.removeClass('content-small');
+            $content.addClass('content-wide');
         };
     </script>
 </body>

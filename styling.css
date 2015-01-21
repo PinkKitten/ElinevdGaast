@@ -71,9 +71,18 @@ body {
 }
 
 #content {
-    margin-left: 20%;
+/*    margin-left: 20%;*/
 }
 
+.content-wide {
+    margin-left: 10%;
+    transition: all 0.5s ease-in-out;
+}
+
+.content-small {
+    margin-left: 20%;
+    transition: all 0.5s ease-in-out;
+}
 .page {
     height: 100%;
     padding: 10px;
