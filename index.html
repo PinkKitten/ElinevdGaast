@@ -19,16 +19,19 @@
         <nav>
             <ul>
                 <li>
-                    <a class='active' data-scroll-nav='0'>About</a>
+                    <a class='active' data-scroll-nav='0'>Home</a>
                 </li>
                 <li>
-                    <a data-scroll-nav='1'>Portfolio</a>
+                    <a class='active' data-scroll-nav='1'>About</a>
                 </li>
                 <li>
-                    <a data-scroll-nav='2'>Skills</a>
+                    <a data-scroll-nav='2'>Portfolio</a>
                 </li>
                 <li>
-                    <a data-scroll-nav='3'>Contact</a>
+                    <a data-scroll-nav='3'>Skills</a>
+                </li>
+                <li>
+                    <a data-scroll-nav='4'>Contact</a>
                 </li>
             </ul>
         </nav>
@@ -43,6 +46,9 @@
             </div>
         </div>
         <div data-scroll-index="1" class="page">
+            <h2>About</h2>
+        </div>
+        <div data-scroll-index="2" class="page">
             <h2>Recent Work</h2>
             <p>Below are a couple of my most recent projects. I usually have a couple projects ongoing where I try to apply new skills.</p>
             <div id="wedesign" data-toggle="modal" data-target="#wedesignModal">
@@ -188,7 +194,7 @@
               </div>
             </div>
         </div>
-        <div data-scroll-index="2" class="page"><h2>Skills</h2>
+        <div data-scroll-index="3" class="page"><h2>Skills</h2>
             <p>
                 Ruby 
                 Ruby on Rails 
@@ -206,14 +212,38 @@
             <p>Download my resume</p>
             <a href="images/Resume_ElinevanderGaast.PDF" download>Link</a>
             </div>
-        <div data-scroll-index="3" class="page"><h2>Contact</h2>
-            <div id="contact-img">
-                <img src="images/paper-airplane.jpg">
-                <div class='contact-circle' id="circle1">Email</div>
-                <div class='contact-circle' id="circle2">Phone</div>
-                <div class='contact-circle' id="circle3">LinkedIn</div>
-                <div class='contact-circle' id="circle4">Github</div>
-                <div class='contact-circle' id="circle5">Pinterest</div>
+        <div data-scroll-index="4" class="page">
+            <div id="contact">
+                <img src="images/paper-airplane.jpg" id="plane-img">
+                <div id="all-circles">
+                    <div id="email">
+                        <div class='contact-circle'>
+                            <img src="images/email_icon.png" />
+                        </div>
+                        <p class="pink">EMAIL</p>
+                        <p class="contact">elinevdgaast@gmail.com</p>
+                    </div>
+                    <div id="phone">
+                        <div class='contact-circle' id="circle2"></div>
+                        <p class="pink">PHONE</p>
+                        <p class="contact">415-539-9156</p>
+                    </div>
+                    <div id="linkedin">
+                        <div class='contact-circle' id="circle3"></div>
+                        <p class="pink">LINKEDIN</p>
+                        <p class="contact">stuff</p>
+                    </div>
+                    <div id="github">
+                        <div class='contact-circle' id="circle4"></div>
+                        <p class="pink">GITHUB</p>
+                        <p class="contact">github</p>
+                    </div>
+                    <div id="pinterest">
+                        <div class='contact-circle' id="circle5"></div>
+                        <p class="pink">PINTEREST</p>
+                        <p class="contact">pinterest</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
