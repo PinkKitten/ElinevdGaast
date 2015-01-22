@@ -65,7 +65,7 @@ body {
 }
 
 .nav-container ul li a:hover {
-    color: pink;
+    color: #F660AB;
     cursor: pointer;
     text-decoration: none;
 }
@@ -154,6 +154,24 @@ p.title {
 .modal-footer p.divider {
     margin-left: 5px;
     margin-right: 5px;
+}
+
+/*skills*/
+
+.logo {
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+    height: 100px;
+}
+
+.logo-backbone {
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+}
+
+.logo:hover, .logo-backbone:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
 }
 /*contact*/
 
