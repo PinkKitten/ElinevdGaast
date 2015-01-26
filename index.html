@@ -2,6 +2,7 @@
 <head>
     <script src="vendor/jquery-1.11.1.js"></script>
     <script src="vendor/bootstrap.min.js"></script>
+    <script src="vendor/parse.min.js"></script>
     <script src="vendor/scrollIt.min.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap-theme.min.css">
@@ -226,7 +227,27 @@
             </div>
         <div data-scroll-index="4" class="page">
             <div id="contact">
-                <img src="images/paper-airplane.jpg" id="plane-img">
+                <img src="images/paper-airplane-copy.png" id="plane-img">
+                <div id="message-form">
+                    <form action=""
+                          method="post" 
+                          enctype="text/plain">
+                        <h2>Leave me a message...</h2>
+                        <input type="text" 
+                               name="name" 
+                               placeholder="Your name" 
+                               class="form-control">
+                        <input type="text" 
+                               name="mail" 
+                               placeholder="Your email"
+                               class="form-control">
+                        <textarea name='message' 
+                                  placeholder="Your message" 
+                                  class="form-control"></textarea>
+                        <input type="submit" value="Send" class="btn btn-default" id="send-form">
+                        <input type="reset" value="Reset" class="btn btn-default">
+                    </form>
+                </div>
                 <div id="all-circles">
                     <div id="email">
                         <div class='contact-circle'>
@@ -273,10 +294,12 @@
     </div>
     
     <script>
+    Parse.initialize("9UOaMHRHOJUY922ftObHOh6fpNcJZu1Yxmd1J4u2", "ooedgupoQcgfis6Sg9YeZ4Ra6nBw9sT6neR0kzVJ");
 		var menuIcon = document.getElementById('menu-bar');
         var fullMenu = document.getElementById('full-menu');
         var closeMenu = document.getElementById('close-menu');
         var $content = $(document.getElementById('content'));
+        var submitForm = document.getElementById('send-form');
         
         menuIcon.onclick = function () {
             $(menuIcon).hide();
@@ -291,6 +314,15 @@
             $content.removeClass('content-small');
             $content.addClass('content-wide');
         };
+        
+        submitForm.onclick = function (event) {
+            event.preventDefault();
+            var TestObject = Parse.Object.extend("TestObject");
+            var testObject = new TestObject();
+            testObject.save({foo: "bar"}).then(function(object) {
+              alert("yay! it worked");
+            });
+        }
     </script>
 </body>
 </html>
