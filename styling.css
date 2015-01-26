@@ -100,6 +100,28 @@ body {
     text-align: center;
 }
 
+/*about*/
+#personal-img, #about-me {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#personal-img {
+    width: 35%
+}
+
+#about-me {
+    margin-left: 20px;
+    width: 50%;
+}
+
+#personal-img img {
+    width: 100%;
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+    border-radius: 10px;
+}
+
 /*recent work*/
 
 #wedesign, #poieo, #cateroids {
