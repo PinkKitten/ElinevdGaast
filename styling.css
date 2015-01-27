@@ -11,6 +11,10 @@ body {
     position: relative;
 }
 
+.nav-container ul li a.active {
+    opacity: 0.2;
+}
+
 #menu-bar {
     margin: 20px;
     font-size: 32px;
@@ -123,6 +127,14 @@ body {
     filter: grayscale(100%);
     border-radius: 10px;
     opacity: 0.6;
+    transition: all 0.5s ease-in-out;
+}
+
+#personal-img img:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
 }
 
 /*recent work*/
@@ -183,20 +195,38 @@ p.title {
 
 /*skills*/
 
-.logo {
-    -webkit-filter: grayscale(100%); 
-    filter: grayscale(100%);
-    height: 100px;
+.logo, .logo-backbone {
+    min-width: 110px;
+    min-height: 100px;
+    display: inline-block;
+ /*   float: left;*/
 }
 
-.logo-backbone {
+.logo img {
     -webkit-filter: grayscale(100%); 
     filter: grayscale(100%);
+    height: 80px;
 }
 
-.logo:hover, .logo-backbone:hover {
+.logo-backbone img {
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.logo img:hover, .logo-backbone img:hover {
     filter: none;
     -webkit-filter: grayscale(0%);
+}
+
+#resume {
+    text-align: center;
+    display: inline-block;
+}
+
+#resume a img {
+    height: 80px;
 }
 /*contact*/
 

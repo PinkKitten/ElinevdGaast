@@ -9,7 +9,14 @@
     <link rel="stylesheet" type="text/css" href="styling.css">
     <script>
         $(function(){
-          $.scrollIt();
+          $.scrollIt({
+              upKey: 38,           
+              downKey: 40,           
+              easing: 'linear',     
+              scrollTime: 600,      
+              activeClass: 'active',
+          }
+          );
         });
     </script>
 </head>
@@ -47,7 +54,7 @@
             </div>
         </div>
         <div data-scroll-index="1" class="page">
-            <div id="personal-img"><img src="images/Eline.jpg" /></div>
+            <div id="personal-img"><img src="images/eline3.jpg" /></div>
             <div id="about-me">
                  <h2>Passion for creating beautiful things</h2>
                 <h3>My name is Eline and I am a web developer based in San Francisco, CA. Most of my experience is in Ruby on Rails and Javascript but I am always looking for new technologies to learn. </h3>
@@ -203,27 +210,23 @@
         </div>
         <div data-scroll-index="3" class="page"><h2>Skills</h2>
             <p>
-                <img src="images/rails_logo.png" class="logo"/>
-                <img src="images/ruby_logo.png" class="logo"/>
-                <img src="images/javascript_logo.png" class="logo"/>
-                <img src="images/backbonejs_logo.png" class="logo-backbone"/>
-                <img src="images/jquery_logo.gif" class="logo"/>
-                <img src="images/css_logo.gif" class="logo"/>
-                Ruby 
-                Ruby on Rails 
-                JavaScript
-                jQuery
-                Backbone.js
-                SQL
-                Git
-                HTML
-                CSS
-                Twitter Bootstrap
-                RSpec
-                Jasmine
+                <div class="logo"><img src="images/rails_logo.png" /></div>
+                <div class="logo"><img src="images/ruby_logo.png" /></div>
+                <div class="logo"><img src="images/javascript_logo.png" /></div>
+                <div class="logo-backbone"><img src="images/backbonejs_logo.png" /></div>
+                <div class="logo"><img src="images/jquery_logo.gif" /></div>
+                <div class="logo"><img src="images/css_logo.gif" /></div>
+                <div class="logo">SQL</div>
+                <div class="logo"><img src="images/git-logo.png" /></div>
+                <div class="logo"><img src="images/html-logo.png" /></div>
+                <div class="logo"><img src="images/bootstrap-logo.png" /></div>
+                <div class="logo"><img src="images/rspec-logo.png" /></div>
+                <div class="logo"><img src="images/jasmine_logo.png" /></div>
             </p>
-            <p>Download my resume</p>
-            <a href="images/Resume_ElinevanderGaast.PDF" download>Link</a>
+            <div id="resume">
+                <a href="images/Resume_ElinevanderGaast.PDF" download><img src="images/logo-pdf.png"></a>
+                <p>Download my resume</p>
+            </div>
             </div>
         <div data-scroll-index="4" class="page">
             <div id="contact">
