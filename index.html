@@ -286,6 +286,15 @@
                         <p class="contact">pinterest</p>
                     </div>
                 </div>
+                <div class="alert alert-warning alert-dismissible" 
+                     role="alert" 
+                     id="list-error-message">
+                    <button type="button" class="close" id="close-errors">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <div id="errors"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -303,6 +312,7 @@
         var closeMenu = document.getElementById('close-menu');
         var $content = $(document.getElementById('content'));
         var submitForm = document.getElementById('send-form');
+        var closeErrors = document.getElementById('close-errors');
         
         menuIcon.onclick = function () {
             $(menuIcon).hide();
@@ -318,24 +328,56 @@
             $content.addClass('content-wide');
         };
         
+        closeErrors.onclick = function () {
+            $(document.getElementById('errors')).html('');
+            $(document.getElementById('list-error-message')).hide();
+        };
+        
         submitForm.onclick = function (event) {
             event.preventDefault();
             var $target = $(event.currentTarget).parent();
             var senderName = $target.find('#sender_name').val();
             var senderEmail = $target.find('#sender_email').val();
             var senderMessage = $target.find('#sender_message').val();
+            var errors = "";
+            if (!emailValid(senderEmail)) {
+                errors = errors.concat("Please enter a valid email address<br>");
+            }
+            if (senderName === "") {
+                errors = errors.concat("Name can't be blank<br>");
+            }
+            if (senderMessage === "") {
+                errors = errors.concat("Message can't be blank<br>");
+            }
             //add checks 
-            var Message = Parse.Object.extend("Message");
-            var newMessage = new Message();
-            newMessage.save({
-                senderName: senderName,
-                email: senderEmail,
-                message: senderMessage
-            });
-            //add messages of sending or error
-            $(document.getElementById('sender_name')).val('');
-            $(document.getElementById('sender_email')).val('');
-            $(document.getElementById('sender_message')).val('');
+            if (errors.length === 0) {
+                var Message = Parse.Object.extend("Message");
+                var newMessage = new Message();
+                newMessage.save({
+                    senderName: senderName,
+                    email: senderEmail,
+                    message: senderMessage
+                });
+                //add messages of sending
+                $(document.getElementById('sender_name')).val('');
+                $(document.getElementById('sender_email')).val('');
+                $(document.getElementById('sender_message')).val('');
+            } else {
+                $(document.getElementById('errors')).html(errors);
+                $(document.getElementById('list-error-message')).show();
+            }
+
+        }
+        
+        function emailValid(email){
+        	if (/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}/.test(email)){
+                // email.animate({backgroundColor:'white'}, 'slow');
+        		return true;
+        	}
+        	else {
+                // email.animate({backgroundColor:'pink'}, 'slow');
+        		return false;
+        	}
         }
     </script>
 </body>
