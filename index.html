@@ -232,7 +232,7 @@
                     <form action=""
                           method="post" 
                           enctype="text/plain">
-                        <h2>Leave me a message...</h2>
+                        <h2>Leave a message...</h2>
                         <input type="text" 
                                name="name" 
                                placeholder="Your name" 
@@ -247,7 +247,7 @@
                                   placeholder="Your message" 
                                   class="form-control"
                                   id="sender_message"></textarea>
-                        <input type="submit" value="Send" class="btn btn-default" id="send-form">
+                        <div id="send-form"><img src="images/send-icon.png"></div>
                     </form>
                 </div>
                 <div id="all-circles">
@@ -302,6 +302,11 @@
                     </button>
                     <div id="errors"></div>
                 </div>
+                <div id="thank-you-note">
+                    <img src="images/cat.png" />
+                    <h3>Thank you for leaving a message.</h3> 
+                    <h3>I will get back to you as soon as possible.</h3>
+                </div>
             </div>
         </div>
     </div>
@@ -336,27 +341,32 @@
         };
         
         closeErrors.onclick = function () {
+            closeErrorDiv();
+        };
+        
+        function closeErrorDiv () {
             $(document.getElementById('errors')).html('');
             $(document.getElementById('list-error-message')).hide();
         };
         
         submitForm.onclick = function (event) {
             event.preventDefault();
+            closeErrorDiv();
+            $(document.getElementById('thank-you-note')).hide();
             var $target = $(event.currentTarget).parent();
             var senderName = $target.find('#sender_name').val();
             var senderEmail = $target.find('#sender_email').val();
             var senderMessage = $target.find('#sender_message').val();
             var errors = "";
-            if (!emailValid(senderEmail)) {
-                errors = errors.concat("Please enter a valid email address<br>");
-            }
             if (senderName === "") {
                 errors = errors.concat("Name can't be blank<br>");
+            }
+            if (!emailValid(senderEmail)) {
+                errors = errors.concat("Please enter a valid email address<br>");
             }
             if (senderMessage === "") {
                 errors = errors.concat("Message can't be blank<br>");
             }
-            //add checks 
             if (errors.length === 0) {
                 var Message = Parse.Object.extend("Message");
                 var newMessage = new Message();
@@ -365,10 +375,10 @@
                     email: senderEmail,
                     message: senderMessage
                 });
-                //add messages of sending
                 $(document.getElementById('sender_name')).val('');
                 $(document.getElementById('sender_email')).val('');
                 $(document.getElementById('sender_message')).val('');
+                $(document.getElementById('thank-you-note')).show();
             } else {
                 $(document.getElementById('errors')).html(errors);
                 $(document.getElementById('list-error-message')).show();
