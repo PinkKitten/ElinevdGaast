@@ -217,7 +217,8 @@ p.title {
 
 .form-control {
     background-color: rgba(0, 0, 0, 0.1);
-    margin: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 textarea:focus, input[type="text"]:focus, input[type="submit"]:focus {
@@ -236,6 +237,11 @@ textarea:focus, input[type="text"]:focus, input[type="submit"]:focus {
     width: 100%;
 }
 
+#all-circles a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .contact-circle {
     height: 100px;
     width: 100px;
@@ -247,7 +253,8 @@ textarea:focus, input[type="text"]:focus, input[type="submit"]:focus {
 .contact-circle img {
     height: 40px;
     position: relative;
-    top: 25%;
+    top: 50%;
+    margin-top: -20px;
 }
 
 #email, #phone, #linkedin, #github, #pinterest {
@@ -266,9 +273,6 @@ textarea:focus, input[type="text"]:focus, input[type="submit"]:focus {
     color: grey;
 }
 
-.contact:hover {
-    cursor: pointer;
-}
 /*footer*/
 
 #footer {
@@ -285,7 +289,7 @@ textarea:focus, input[type="text"]:focus, input[type="submit"]:focus {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    left: 20%;
+    left: 5%;
 }
 
 /*error messages*/
