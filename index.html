@@ -236,14 +236,17 @@
                         <input type="text" 
                                name="name" 
                                placeholder="Your name" 
-                               class="form-control">
+                               class="form-control"
+                               id="sender_name">
                         <input type="text" 
                                name="mail" 
                                placeholder="Your email"
-                               class="form-control">
+                               class="form-control"
+                               id="sender_email">
                         <textarea name='message' 
                                   placeholder="Your message" 
-                                  class="form-control"></textarea>
+                                  class="form-control"
+                                  id="sender_message"></textarea>
                         <input type="submit" value="Send" class="btn btn-default" id="send-form">
                         <input type="reset" value="Reset" class="btn btn-default">
                     </form>
@@ -317,11 +320,22 @@
         
         submitForm.onclick = function (event) {
             event.preventDefault();
-            var TestObject = Parse.Object.extend("TestObject");
-            var testObject = new TestObject();
-            testObject.save({foo: "bar"}).then(function(object) {
-              alert("yay! it worked");
+            var $target = $(event.currentTarget).parent();
+            var senderName = $target.find('#sender_name').val();
+            var senderEmail = $target.find('#sender_email').val();
+            var senderMessage = $target.find('#sender_message').val();
+            //add checks 
+            var Message = Parse.Object.extend("Message");
+            var newMessage = new Message();
+            newMessage.save({
+                senderName: senderName,
+                email: senderEmail,
+                message: senderMessage
             });
+            //add messages of sending or error
+            $(document.getElementById('sender_name')).val('');
+            $(document.getElementById('sender_email')).val('');
+            $(document.getElementById('sender_message')).val('');
         }
     </script>
 </body>
