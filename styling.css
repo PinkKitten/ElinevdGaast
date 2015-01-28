@@ -114,12 +114,12 @@ body {
 /*about*/
 #personal-img, #about-me {
     display: inline-block;
-    vertical-align: middle;
-    margin-top: 20px;
+    vertical-align: top;
 }
 
 #personal-img {
-    width: 35%
+    width: 25%;
+    margin-top: 20px;
 }
 
 #about-me {
@@ -141,6 +141,22 @@ body {
     -webkit-filter: grayscale(0%);
     opacity: 1;
     transition: all 0.5s ease-in-out;
+}
+
+h3.text {
+    font-size: 22px;
+}
+
+#dress {
+/*    height: 450px;*/
+    max-width: 100%;
+/*    position: absolute;*/
+/*    right: 5%;*/
+}
+
+#dress-div {
+    display: inline-block;
+    width: 20%;
 }
 
 /*recent work*/
@@ -201,9 +217,18 @@ p.title {
 
 /*skills*/
 
-.logo, .logo-backbone {
+#skill-page {
+    position: relative;
+}
+
+#all-logos {
+    display: inline-block;
+    text-align: center;
+}
+
+.logo, .logo-wide {
     min-width: 110px;
-    min-height: 100px;
+    min-height: 80px;
     display: inline-block;
  /*   float: left;*/
 }
@@ -214,25 +239,42 @@ p.title {
     height: 80px;
 }
 
-.logo-backbone img {
+.logo-wide img {
     -webkit-filter: grayscale(100%); 
     filter: grayscale(100%);
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.logo img:hover, .logo-backbone img:hover {
+.logo img:hover, .logo-wide img:hover {
     filter: none;
     -webkit-filter: grayscale(0%);
+}
+
+#new-skill {
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    left: 55%;
+/*    background-color: #F660AB;*/
+}
+
+#months {
+    text-align: left;
 }
 
 #resume {
     text-align: center;
     display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 50px;
 }
 
 #resume a img {
     height: 80px;
+    opacity: 0.7;
 }
 /*contact*/
 
