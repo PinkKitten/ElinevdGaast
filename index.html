@@ -19,6 +19,16 @@
           );
         });
     </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-58939480-3', 'auto');
+      ga('send', 'pageview');
+
+    </script>
 </head>
 <body>
     <img src="images/sf1.jpg" id="sf" />
@@ -46,7 +56,7 @@
         </nav>
     </div>
     <div id="content" class='content-wide'>
-        <div data-scroll-index="0" class="page">
+        <div data-scroll-index="0" class="page" id="first-page">
             <div id="welcome-container">
                 <h1>Welcome</h1>
                 <br>
@@ -57,15 +67,15 @@
             <h1>Passion for creating beautiful things</h1>
             <div id="personal-img"><img src="images/eline3.jpg" /></div>
             <div id="about-me">
-                <h3 class='text'>My name is Eline and I am a web developer based in San Francisco, CA. Most of my experience is in Ruby on Rails and Javascript but I am always looking for new technologies to learn. </h3>
-                <h3 class='text'>Before making a complete switch to software development I worked in market research for big Tech companies. Building simulation models to predict consumer behavior.</h3>
-                <h3 class='text'>I am also obsessed with fashion and in my free time I enjoy drawing fashion illustrations and designing clothes.</h3>  
+                <h3 class='text'>My name is Eline and I am a web developer based in San Francisco, CA. Most of my experience is with Ruby (on Rails) and Javascript but I am always looking expand into new languages and technologies. </h3>
+                <h3 class='text'>Before making a switch to software development I worked in advanced quantitative market research for big Tech companies. In this role I built simulation models to predict consumer behavior. My goal is to leverage my consumer insights experience with my software development skills to drive impact at a fast-growing company.</h3>
+                <h3 class='text'>On a personal level I have a passion for fashion and in my free time I enjoy drawing fashion illustrations (see on the right) and designing clothes.</h3>  
             </div>
             <div id="dress-div"><img src="images/purple.png" / id="dress"></div>
         </div>
         <div data-scroll-index="2" class="page">
             <h2>Recent Work</h2>
-            <p>Below are a couple of my most recent projects. I usually have a couple projects ongoing where I try to apply new skills.</p>
+            <p>Below are a few of my most recent development projects. </p>
             <div id="wedesign" data-toggle="modal" data-target="#wedesignModal">
                 <div class="img-container"><img src="images/wedesign.png" /></div>
                 <p class="title">WeDesign</p>
@@ -208,6 +218,9 @@
                 </div>
               </div>
             </div>
+            <div id="work-progress">
+                <img src="images/dev_icon.png" id="dev-icon"/>
+                <p>I am always working on new ideas to build out my skillset. Please visit the site again soon for updates.</p></div>
         </div>
         <div data-scroll-index="3" class="page"><h2>Skills</h2>
             <div id="skill-page">
@@ -230,9 +243,11 @@
                     <h4>Study something new every month.</h4>
                     <br>
                     <div id="months">
-                        <h3>JANUARY: Advanced data structures</h3>
-                        <p>FEBRUARY: Java</p>
+                        <p>JANUARY: Advanced data structures</p>
+                        <p id="active-month">FEBRUARY: Java</p>
                         <p>MARCH: ?? </p>
+                        <p>APRIL: ?? </p>
+                        <p>MAY: ?? </p>
                     </div>
                 </div>
                 <div id="resume">
@@ -412,16 +427,6 @@
         		return false;
         	}
         }
-    </script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-58939480-3', 'auto');
-      ga('send', 'pageview');
-
     </script>
 </body>
 </html>
