@@ -43,32 +43,32 @@
         <nav>
             <ul>
                 <li>
-                    <a class='active' data-scroll-nav='0'>Home</a>
+                    <a class='active navigation' data-scroll-nav='0'>Home</a>
                 </li>
                 <li>
-                    <a class='active' data-scroll-nav='1'>About</a>
+                    <a class='navigation' data-scroll-nav='1'>About</a>
                 </li>
                 <li>
-                    <a data-scroll-nav='2'>Portfolio</a>
+                    <a class='navigation' data-scroll-nav='2'>Portfolio</a>
                 </li>
                 <li>
-                    <a data-scroll-nav='3'>Skills</a>
+                    <a class='navigation' data-scroll-nav='3'>Skills</a>
                 </li>
                 <li>
-                    <a data-scroll-nav='4'>Contact</a>
+                    <a class='navigation' data-scroll-nav='4'>Contact</a>
                 </li>
             </ul>
         </nav>
     </div>
     <div id="content" class='content-wide'>
-        <div data-scroll-index="0" class="page" id="first-page">
+        <div data-scroll-index="0" class="page" id="first-page page-0">
             <div id="welcome-container">
                 <h1>Welcome</h1>
                 <br>
                 <h3>Eline van der Gaast &middot; 2015</h3>
             </div>
         </div>
-        <div data-scroll-index="1" class="page">
+        <div data-scroll-index="1" class="page" id='page-1'>
             <h1>Passion for creating beautiful things</h1>
             <div id="personal-img"><img src="images/eline3.jpg" /></div>
             <div id="about-me">
@@ -78,7 +78,7 @@
             </div>
             <div id="dress-div"><img src="images/purple.png" / id="dress"></div>
         </div>
-        <div data-scroll-index="2" class="page">
+        <div data-scroll-index="2" class="page" id='page-2'>
             <h2>Recent Work</h2>
             <div id="wedesign" data-toggle="modal" data-target="#wedesignModal">
                 <div class="img-container"><img src="images/wedesign.png" /></div>
@@ -226,7 +226,7 @@
                 <img src="images/dev_icon.png" id="dev-icon"/>
                 <p>I am always working on new ideas to build out my skillset. Please visit the site again soon for updates.</p></div>
         </div>
-        <div data-scroll-index="3" class="page"><h2>Skills</h2>
+        <div data-scroll-index="3" class="page" id='page-3'><h2>Skills</h2>
             <div id="skill-page">
                 <div id="all-logos">
                     <div class="logo"><img src="images/ruby_logo.png" /></div>
@@ -260,7 +260,7 @@
                 </div>
             </div>
         </div>
-        <div data-scroll-index="4" class="page">
+        <div data-scroll-index="4" class="page" id='page-4'>
             <div id="contact">
                 <img src="images/paper-airplane-copy.png" id="plane-img">
                 <div id="message-form">
@@ -355,12 +355,25 @@
     
     <script>
     Parse.initialize("9UOaMHRHOJUY922ftObHOh6fpNcJZu1Yxmd1J4u2", "ooedgupoQcgfis6Sg9YeZ4Ra6nBw9sT6neR0kzVJ");
-		var menuIcon = document.getElementById('menu-bar');
+		    var menuIcon = document.getElementById('menu-bar');
         var fullMenu = document.getElementById('full-menu');
         var closeMenu = document.getElementById('close-menu');
         var $content = $(document.getElementById('content'));
         var submitForm = document.getElementById('send-form');
         var closeErrors = document.getElementById('close-errors');
+        
+        var navigation = document.getElementsByClassName('navigation');
+        
+        for(i = 0; i < navigation.length; i++) {
+          // navigation[i].addEventListener("click", handleEnd);
+          navigation[i].addEventListener("touchend", handleEnd);
+        };
+        
+        function handleEnd(event) {
+          $target = $(event.currentTarget);
+          targetId = $target.data('scroll-nav');
+          $("body").scrollTop($("#page-" + targetId).offset().top);
+        };
         
         menuIcon.onclick = function () {
             $(menuIcon).hide();

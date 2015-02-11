@@ -393,7 +393,7 @@
         height: 2.5em;
         position: relative;
         top: 50%;
-        margin-top: 0em;
+        margin-top: 20%;
     }
 
     #email, #phone, #linkedin, #github, #pinterest {
