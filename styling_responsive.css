@@ -306,6 +306,8 @@
     }
 
     #plane-img {
+        position: absolute;
+        top: 0;
         width: 100%;
         opacity: 0.1;
     }
@@ -365,8 +367,8 @@
     #all-circles {
         display: block;
         text-align: center;
-        position: absolute;
-        top: 150%;
+        position: relative;
+        top: 0%;
         margin-left: auto;
         margin-right: auto;
         width: 100%;
@@ -411,7 +413,7 @@
     /*footer*/
 
     #footer {
-        position: absolute;
+        position: relative;
         bottom: 0;
         width: 100%;
         height: 60px;
