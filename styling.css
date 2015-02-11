@@ -94,7 +94,7 @@ body {
 }
 
 #first-page {
-    min-height: 900px;
+    min-height: 56em;
 }
 
 #sf {
@@ -106,16 +106,17 @@ body {
 #welcome-container {
     background-color: rgba(255,255,255,0.2);
     width: 50%;
-    border: 1px solid #D8D8D8;
-    height: 200px;
+    border: 0.1em solid #D8D8D8;
+    height: 12.5em;
     margin-left: auto;
     margin-right: auto;
     margin-top: 15%;
-    padding: 10px;
+    padding: 0.8em;
     text-align: center;
 }
 
 /*about*/
+
 #personal-img, #about-me {
     display: inline-block;
     vertical-align: top;

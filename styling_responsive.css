@@ -75,10 +75,6 @@
         text-decoration: none;
     }
 
-    #content {
-    /*    margin-left: 20%;*/
-    }
-
     .content-wide {
         margin-left: 10%;
         transition: all 0.5s ease-in-out;
@@ -90,7 +86,11 @@
     }
     .page {
         height: 100%;
-        padding: 10px;
+        padding: 0.8em;
+    }
+    
+    #first-page {
+        min-height: 100%;
     }
 
     #sf {
