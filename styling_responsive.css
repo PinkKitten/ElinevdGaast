@@ -89,6 +89,9 @@
         height: auto;
         min-height: 100%;
         padding: 0.8em;
+    }
+    
+    .clearfix {
         overflow: auto;
     }
     
@@ -207,7 +210,7 @@
     }
 
     .modal-img img {
-        width: 250px;
+        width: 90%;
     }
 
     .modal-footer p, .modal-footer a {
@@ -237,28 +240,27 @@
     }
 
     #all-logos {
-        display: inline-block;
+        display: block;
         text-align: center;
     }
 
     .logo, .logo-wide {
-        min-width: 110px;
-        min-height: 80px;
+        width: 100%;
         display: inline-block;
-     /*   float: left;*/
     }
 
     .logo img {
         -webkit-filter: grayscale(100%); 
         filter: grayscale(100%);
-        height: 80px;
+        width: 100%;
+        height: auto;
     }
 
     .logo-wide img {
         -webkit-filter: grayscale(100%); 
         filter: grayscale(100%);
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 0.8em;
+        margin-right: 0.8em;
     }
 
     .logo img:hover, .logo-wide img:hover {
@@ -267,12 +269,9 @@
     }
 
     #new-skill {
-        display: none;
-        display: inline-block;
-        position: absolute;
+        display: block;
+        position: relative;
         text-align: center;
-        left: 55%;
-    /*    background-color: #F660AB;*/
     }
 
     #months {
