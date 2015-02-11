@@ -314,19 +314,20 @@
 
     #message-form {
         width: 100%;
-        position: absolute;
+        position: relative;
         top: 0px;
     }
 
     .form-control {
         background-color: rgba(0, 0, 0, 0.1);
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
     }
 
     #send-form {
-        float: right;
-        margin: 5px;
+        display: block;
+        width: 100%;
+        margin: 0.3em;
         opacity: 0.6;
     }
 
@@ -336,31 +337,32 @@
     }
 
     #send-form img {
-        height: 30px;
+        height: 1.9em;
+        float: right;
     }
 
     #thank-you-note {
         display: none;
         position: absolute;
-        top: 10%;
-        right: 10%;
-        width: 50%;
+        top: 0.8em;
+        right: 0.8em;
+        width: 90%;
         color: #F660AB;
         text-align: center;
     }
 
     #thank-you-note img {
-        height: 40px;
+        height: 2.5em;
         opacity: 0.7;
     }
 
     #thank-you-note h3 {
-        margin-top: 5px;
+        margin-top: 0.3em;
     }
 
     textarea:focus, input[type="text"]:focus, input[type="submit"]:focus, #sender_message:focus, #send-form:active {
         border-color: rgba(246, 96, 171, 0.8);
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(246, 96, 171, 0.6);
+        box-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(246, 96, 171, 0.6);
         outline: 0 none;
     }
 
@@ -380,33 +382,33 @@
     }
 
     .contact-circle {
-        height: 100px;
-        width: 100px;
+        height: 6.25em;
+        width: 6.25em;
         border-radius: 50%;
         background-color: #d0d0d0;
         display: inline-block;
     }
 
     .contact-circle img {
-        height: 40px;
+        height: 2.5em;
         position: relative;
         top: 50%;
-        margin-top: -20px;
+        margin-top: 0em;
     }
 
     #email, #phone, #linkedin, #github, #pinterest {
         display: block;
-        margin: 10px;
+        margin: 0.8em;
     }
 
     .pink {
         color: #F660AB;
         font-weight: bold;
-        margin: 5px;
+        margin: 0.3em;
     }
 
     .contact {
-        font-size: 14px;
+        font-size: 0.9em;
         color: grey;
     }
 
@@ -416,11 +418,10 @@
         position: relative;
         bottom: 0;
         width: 100%;
-        height: 60px;
+        height: 3.75em;
         background-color: black;
         color: white;
         overflow: hidden;
-        /*background-color: #f5f5f5;*/
     }
 
     .container-footer {
