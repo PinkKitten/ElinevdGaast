@@ -89,6 +89,7 @@
         height: auto;
         min-height: 100%;
         padding: 0.8em;
+        overflow: auto;
     }
     
     #first-page {
@@ -164,31 +165,30 @@
     /*recent work*/
 
     #wedesign, #poieo, #cateroids, #work-progress {
-        width: 35%;
+        width: 100%;
         float: left;
-        margin-right: 20px;
+        margin-right: 0em;
     }
 
     #work-progress {
-        margin-top: 20px;
+        margin-top: 1.25em;
         text-align: center;
     }
 
     #dev-icon {
         -webkit-filter: grayscale(100%); 
         filter: grayscale(100%);
-        height: 50px;
-        margin: 10px;
+        height: 3.2em;
+        margin: 0.8em;
     }
 
     .img-container {
-    /*    height: 175px;*/
+
     }
 
     #wedesign img, #poieo img, #cateroids img {
-    /*    width: 325px;*/
         width: 100%;
-        border: 1px solid #f5f5f5;
+        border: 0.1em solid #f5f5f5;
     }
 
     #wedesign img:hover, #poieo img:hover, #cateroids img:hover {
@@ -203,7 +203,7 @@
 
     .modal-img {
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 0.8em;
     }
 
     .modal-img img {
@@ -226,8 +226,8 @@
     }
 
     .modal-footer p.divider {
-        margin-left: 5px;
-        margin-right: 5px;
+        margin-left: 0.3em;
+        margin-right: 0.3em;
     }
 
     /*skills*/
