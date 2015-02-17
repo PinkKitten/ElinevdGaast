@@ -6,7 +6,7 @@
 
 body {
     font-family: 'MyWebFont', Fallback, sans-serif;
-    font-size: 18px;
+    font-size: 1.2em;
     background-image: url("images/crossword.png");
     position: relative;
 }
