@@ -96,8 +96,9 @@
     
     .page {
         height: auto;
-        min-height: 130%;
+        min-height: 100%;
         padding: 0.8em;
+        margin-bottom: 30%;
     }
     
     .clearfix {
@@ -250,8 +251,16 @@
     }
 
     .logo, .logo-wide {
-        width: 100%;
         display: inline-block;
+        margin: 1em;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .logo-wide {
+        width: 70%;
     }
 
     .logo img {
@@ -280,6 +289,7 @@
         text-align: center;
         width: 100%;
         left: 0;
+        margin-top: 30%;
     }
 
     #months {
@@ -398,7 +408,7 @@
         height: 2.5em;
         position: relative;
         top: 50%;
-        margin-top: 20%;
+        margin-top: 0%;
     }
 
     #email, #phone, #linkedin, #github, #pinterest {
