@@ -13,12 +13,12 @@
     }
     /*hide navigation on mobile for now*/
     .nav-container ul li a.active {
-        display: hidden;
+        display: none;
         opacity: 0.2;
     }
 
     #menu-bar {
-        display: hidden
+        display: none;
         margin: 20px;
         font-size: 32px;
         position: fixed;
@@ -99,9 +99,9 @@
         overflow: auto;
     }
     
-    #first-page {
+    .page#first-page {
         /*min-height: 100%;*/
-        min-height: 130%;
+        height: 130%;
     }
 
     #sf {
