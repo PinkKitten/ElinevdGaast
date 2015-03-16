@@ -56,10 +56,8 @@
       </div>
     </div>
   </nav>
-    <!-- <img src="images/sf1.jpg" id="sf" /> -->
-    <img src="images/sf_small.jpg" srcset="images/sf_medium.jpg 1000w, images/sf_large.jpg 2000w" id="sf">
-    <div id="content" class='content-wide'>
-        <div data-scroll-index="0" class="page" id="first-page page-0">
+    <div id="content">
+        <div data-scroll-index="0" class="page" id="page-0">
             <div id="welcome-container">
                 <h1>Welcome</h1>
                 <br>
@@ -78,151 +76,162 @@
         </div>
         <div data-scroll-index="2" class="page" id='page-2'>
             <h2>Recent Work</h2>
-            <div id="wedesign" data-toggle="modal" data-target="#wedesignModal">
-                <div class="img-container"><img src="images/wedesign.png" /></div>
-                <p class="title">WeDesign</p>
-            </div>
-            <!-- Modal WeDesign-->
-            <div class="modal fade" 
-                 id="wedesignModal" 
-                 tabindex="-1" 
-                 role="dialog" 
-                 aria-labelledby="wedesignModalLabel" 
-                 aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" 
-                            class="close" 
-                            data-dismiss="modal" 
-                            aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="wedesignModalLabel">WeDesign</h4>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                  <div id="wedesign" data-toggle="modal" data-target="#wedesignModal">
+                    <div class="img-container"><img src="images/wedesign.png" /></div>
+                    <p class="title">WeDesign</p>
                   </div>
-                  <div class="modal-body">
-                    <div class="modal-img">
-                        <img src="images/wedesign.png"/>
-                    </div>
-                    <div class="modal-text">
-                        <p>A platform for aspiring designers and fashion lovers to meet, interact, and shop. Ruby on Rails back-end, Backbone.js front-end.</p>
-                        <ul>
-                            <li>Composite (sub)views to add greater functionality and flexibility</li>
-                        <li>Overrides Backbone's default Model#parse method to handle nested data</li>
-                        <li>Built user authentication and RESTful rails API</li>
-                        <li>Integrated Filereader for easy image uploading</li>
-                    </ul>
+                  <!-- Modal WeDesign-->
+                  <div class="modal fade" 
+                       id="wedesignModal" 
+                       tabindex="-1" 
+                       role="dialog" 
+                       aria-labelledby="wedesignModalLabel" 
+                       aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" 
+                                  class="close" 
+                                  data-dismiss="modal" 
+                                  aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                          </button>
+                          <h4 class="modal-title" id="wedesignModalLabel">WeDesign</h4>
+                        </div>
+                        <div class="modal-body">
+                          <div class="modal-img">
+                              <img src="images/wedesign.png"/>
+                          </div>
+                          <div class="modal-text">
+                              <p>A platform for aspiring designers and fashion lovers to meet, interact, and shop. Ruby on Rails back-end, Backbone.js front-end.</p>
+                              <ul>
+                                  <li>Composite (sub)views to add greater functionality and flexibility</li>
+                              <li>Overrides Backbone's default Model#parse method to handle nested data</li>
+                              <li>Built user authentication and RESTful rails API</li>
+                              <li>Integrated Filereader for easy image uploading</li>
+                          </ul>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="http://www.wedesign.io" target="_blank">Live Demo</a>
+                            <p class="divider">&oast;</p>
+                            <a href="https://github.com/PinkKitten/WeDesign" target="_blank">GitHub</a>
+                          <button type="button"
+                                  class="btn btn-default" 
+                                  data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="modal-footer">
-                      <a href="http://www.wedesign.io" target="_blank">Live Demo</a>
-                      <p class="divider">&oast;</p>
-                      <a href="https://github.com/PinkKitten/WeDesign" target="_blank">GitHub</a>
-                    <button type="button"
-                            class="btn btn-default" 
-                            data-dismiss="modal">Close</button>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <div id="poieo"  data-toggle="modal" data-target="#poieoModal">
+                    <div class="img-container"><img src="images/poieo.png" /></div>
+                    <p class="title">Poieo</p>
+                  </div>
+            
+                  <!-- Modal Poieo-->
+                  <div class="modal fade" 
+                       id="poieoModal" 
+                       tabindex="-1" 
+                       role="dialog" 
+                       aria-labelledby="poieoModalLabel" 
+                       aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" 
+                                  class="close" 
+                                  data-dismiss="modal" 
+                                  aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                          </button>
+                          <h4 class="modal-title" id="poieoModalLabel">Poieo</h4>
+                        </div>
+                        <div class="modal-body">
+                          <div class="modal-img">
+                              <img src="images/poieo.png"/>
+                          </div>
+                          <div class="modal-text">
+                              <p>A todo app inspired by Trello. Ruby on Rails back-end, Backbone.js front-end.</p>
+                              <ul>
+                              <li>Drag and Drop features implemented using jQuery Sortable</li>
+                              <li>Recursive EJS templates to display boards with nested lists and cards</li>
+                              <li>Sorted order of lists and cards persisted to the database</li>
+                          </ul>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="http://poieo.herokuapp.com" target="_blank">Live Demo</a>
+                            <p class="divider">&oast;</p>
+                            <a href="https://github.com/PinkKitten/Poieo" target="_blank">GitHub</a>
+                          <button type="button"
+                                  class="btn btn-default" 
+                                  data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <div id="cateroids"  data-toggle="modal" data-target="#cateroidsModal">
+                    <div class="img-container"><img src="images/cateroids.png" /></div>
+                    <p class="title">CATeroids</p>
+                  </div>
+            
+                  <!-- Modal CATeroids-->
+                  <div class="modal fade" 
+                       id="cateroidsModal" 
+                       tabindex="-1" 
+                       role="dialog" 
+                       aria-labelledby="cateroidsModalLabel" 
+                       aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" 
+                                  class="close" 
+                                  data-dismiss="modal" 
+                                  aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                          </button>
+                          <h4 class="modal-title" id="cateroidsModalLabel">CATeroids</h4>
+                        </div>
+                        <div class="modal-body">
+                          <div class="modal-img">
+                              <img src="images/cateroids.png"/>
+                          </div>
+                          <div class="modal-text">
+                              <p>100% JavaScript based game played in the browser using HTML5 Canvas drawing </p>
+                              <ul>
+                                  <li>Prototypal inheritance to DRY code between the different moving objects</li>
+                              <li>Calculates movement, direction and collision using vector algebra</li>
+                          </ul>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="http://pinkkitten.github.io/JS-CATeroids" target="_blank">Live Demo</a>
+                            <p class="divider">&oast;</p>
+                            <a href="https://github.com/PinkKitten/JS-CATeroids" target="_blank">GitHub</a>
+                          <button type="button"
+                                  class="btn btn-default" 
+                                  data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <div id="work-progress">
+                    <img src="images/dev_icon.png" id="dev-icon"/>
+                    <p>I am always working on new ideas to build out my skillset. Please visit the site again soon for updates.</p>
                   </div>
                 </div>
               </div>
             </div>
-            
-            <div id="poieo"  data-toggle="modal" data-target="#poieoModal">
-                <div class="img-container"><img src="images/poieo.png" /></div>
-                <p class="title">Poieo</p>
-            </div>
-            
-            <!-- Modal Poieo-->
-            <div class="modal fade" 
-                 id="poieoModal" 
-                 tabindex="-1" 
-                 role="dialog" 
-                 aria-labelledby="poieoModalLabel" 
-                 aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" 
-                            class="close" 
-                            data-dismiss="modal" 
-                            aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="poieoModalLabel">Poieo</h4>
-                  </div>
-                  <div class="modal-body">
-                    <div class="modal-img">
-                        <img src="images/poieo.png"/>
-                    </div>
-                    <div class="modal-text">
-                        <p>A todo app inspired by Trello. Ruby on Rails back-end, Backbone.js front-end.</p>
-                        <ul>
-                        <li>Drag and Drop features implemented using jQuery Sortable</li>
-                        <li>Recursive EJS templates to display boards with nested lists and cards</li>
-                        <li>Sorted order of lists and cards persisted to the database</li>
-                    </ul>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                      <a href="http://poieo.herokuapp.com" target="_blank">Live Demo</a>
-                      <p class="divider">&oast;</p>
-                      <a href="https://github.com/PinkKitten/Poieo" target="_blank">GitHub</a>
-                    <button type="button"
-                            class="btn btn-default" 
-                            data-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div id="cateroids"  data-toggle="modal" data-target="#cateroidsModal">
-                <div class="img-container"><img src="images/cateroids.png" /></div>
-                <p class="title">CATeroids</p>
-            </div>
-            
-            <!-- Modal CATeroids-->
-            <div class="modal fade" 
-                 id="cateroidsModal" 
-                 tabindex="-1" 
-                 role="dialog" 
-                 aria-labelledby="cateroidsModalLabel" 
-                 aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" 
-                            class="close" 
-                            data-dismiss="modal" 
-                            aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="cateroidsModalLabel">CATeroids</h4>
-                  </div>
-                  <div class="modal-body">
-                    <div class="modal-img">
-                        <img src="images/cateroids.png"/>
-                    </div>
-                    <div class="modal-text">
-                        <p>100% JavaScript based game played in the browser using HTML5 Canvas drawing </p>
-                        <ul>
-                            <li>Prototypal inheritance to DRY code between the different moving objects</li>
-                        <li>Calculates movement, direction and collision using vector algebra</li>
-                    </ul>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                      <a href="http://pinkkitten.github.io/JS-CATeroids" target="_blank">Live Demo</a>
-                      <p class="divider">&oast;</p>
-                      <a href="https://github.com/PinkKitten/JS-CATeroids" target="_blank">GitHub</a>
-                    <button type="button"
-                            class="btn btn-default" 
-                            data-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="work-progress">
-                <img src="images/dev_icon.png" id="dev-icon"/>
-                <p>I am always working on new ideas to build out my skillset. Please visit the site again soon for updates.</p></div>
         </div>
         <div data-scroll-index="3" class="page" id='page-3'><h2>Skills</h2>
             <div id="skill-page">
