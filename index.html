@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="styling.css">
-    <link rel="stylesheet" type="text/css" href="styling_responsive.css">
+    <!-- <link rel="stylesheet" type="text/css" href="styling_responsive.css"> -->
     <script>
         $(function(){
           $.scrollIt({
@@ -35,31 +35,29 @@
     </script>
 </head>
 <body>
+  <nav id="my-navbar" class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#" class='active navigation' data-scroll-nav='0'>Home <span class="sr-only">(current)</span></a></li>
+          <li><a href="#" class='active navigation' data-scroll-nav='1'>About</a></li>
+          <li><a href="#" class='active navigation' data-scroll-nav='2'>Portfolio</a></li>
+          <li><a href="#" class='active navigation' data-scroll-nav='3'>Skills</a></li>
+          <li><a href="#" class='active navigation' data-scroll-nav='4'>Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
     <!-- <img src="images/sf1.jpg" id="sf" /> -->
     <img src="images/sf_small.jpg" srcset="images/sf_medium.jpg 1000w, images/sf_large.jpg 2000w" id="sf">
-    <span class="glyphicon glyphicon-align-justify" id="menu-bar"></span>
-    <div class='nav-container' id="full-menu">
-        <div class="close-button" id="close-menu"><img src="images/close.svg"></div>
-        <nav>
-            <ul>
-                <li>
-                    <a class='active navigation' data-scroll-nav='0'>Home</a>
-                </li>
-                <li>
-                    <a class='navigation' data-scroll-nav='1'>About</a>
-                </li>
-                <li>
-                    <a class='navigation' data-scroll-nav='2'>Portfolio</a>
-                </li>
-                <li>
-                    <a class='navigation' data-scroll-nav='3'>Skills</a>
-                </li>
-                <li>
-                    <a class='navigation' data-scroll-nav='4'>Contact</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
     <div id="content" class='content-wide'>
         <div data-scroll-index="0" class="page" id="first-page page-0">
             <div id="welcome-container">
@@ -355,8 +353,8 @@
     
     <script>
     Parse.initialize("9UOaMHRHOJUY922ftObHOh6fpNcJZu1Yxmd1J4u2", "ooedgupoQcgfis6Sg9YeZ4Ra6nBw9sT6neR0kzVJ");
-		    var menuIcon = document.getElementById('menu-bar');
-        var fullMenu = document.getElementById('full-menu');
+		    // var menuIcon = document.getElementById('menu-bar');
+        // var fullMenu = document.getElementById('full-menu');
         var closeMenu = document.getElementById('close-menu');
         var $content = $(document.getElementById('content'));
         var submitForm = document.getElementById('send-form');
@@ -375,19 +373,19 @@
           $("body").scrollTop($("#page-" + targetId).offset().top);
         };
         
-        menuIcon.onclick = function () {
-            $(menuIcon).hide();
-            $(fullMenu).toggle('slide');
-            $content.removeClass('content-wide');
-            $content.addClass('content-small');
-        };
+        // menuIcon.onclick = function () {
+        //     $(menuIcon).hide();
+        //     $(fullMenu).toggle('slide');
+        //     $content.removeClass('content-wide');
+        //     $content.addClass('content-small');
+        // };
         
-        closeMenu.onclick = function () {
-            $(fullMenu).toggle('slide');
-            $(menuIcon).show();  
-            $content.removeClass('content-small');
-            $content.addClass('content-wide');
-        };
+        // closeMenu.onclick = function () {
+        //     $(fullMenu).toggle('slide');
+        //     $(menuIcon).show();  
+        //     $content.removeClass('content-small');
+        //     $content.addClass('content-wide');
+        // };
         
         closeErrors.onclick = function () {
             closeErrorDiv();

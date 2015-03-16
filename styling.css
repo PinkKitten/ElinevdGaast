@@ -10,8 +10,24 @@ body {
     background-image: url("images/crossword.png");
     position: relative;
 }
+/*.navbar-default .navbar-collapse, .navbar-default .navbar-form*/
+nav#my-navbar.navbar.navbar-default {
+    position: fixed;
+    width: 100%;
+}
 
-.nav-container ul li a.active {
+nav#my-navbar.navbar.navbar-default > .container-fluid {
+    padding: 0;
+    background-color: black;
+    /*color: white;*/
+    font-size: 1.5em;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+
+/*.nav-container ul li a.active {
     opacity: 0.2;
 }
 
@@ -72,7 +88,7 @@ body {
     color: #F660AB;
     cursor: pointer;
     text-decoration: none;
-}
+}*/
 
 #content {
 /*    margin-left: 20%;*/
