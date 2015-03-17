@@ -286,8 +286,8 @@
                     <br>
                     <div id="months">
                         <p>JANUARY: Advanced data structures</p>
-                        <p id="active-month">FEBRUARY: Java</p>
-                        <p>MARCH: ?? </p>
+                        <p>FEBRUARY: Java</p>
+                        <p id="active-month">MARCH: Node.js </p>
                         <p>APRIL: ?? </p>
                         <p>MAY: ?? </p>
                     </div>
@@ -415,8 +415,6 @@
     
     <script>
     Parse.initialize("9UOaMHRHOJUY922ftObHOh6fpNcJZu1Yxmd1J4u2", "ooedgupoQcgfis6Sg9YeZ4Ra6nBw9sT6neR0kzVJ");
-		    // var menuIcon = document.getElementById('menu-bar');
-        // var fullMenu = document.getElementById('full-menu');
         var closeMenu = document.getElementById('close-menu');
         var $content = $(document.getElementById('content'));
         var submitForm = document.getElementById('send-form');
@@ -425,7 +423,6 @@
         var navigation = document.getElementsByClassName('navigation');
         
         for(i = 0; i < navigation.length; i++) {
-          // navigation[i].addEventListener("click", handleEnd);
           navigation[i].addEventListener("touchend", handleEnd);
         };
         
@@ -434,20 +431,6 @@
           targetId = $target.data('scroll-nav');
           $("body").scrollTop($("#page-" + targetId).offset().top);
         };
-        
-        // menuIcon.onclick = function () {
-        //     $(menuIcon).hide();
-        //     $(fullMenu).toggle('slide');
-        //     $content.removeClass('content-wide');
-        //     $content.addClass('content-small');
-        // };
-        
-        // closeMenu.onclick = function () {
-        //     $(fullMenu).toggle('slide');
-        //     $(menuIcon).show();  
-        //     $content.removeClass('content-small');
-        //     $content.addClass('content-wide');
-        // };
         
         closeErrors.onclick = function () {
             closeErrorDiv();
@@ -497,11 +480,9 @@
         
         function emailValid(email){
         	if (/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}/.test(email)){
-                // email.animate({backgroundColor:'white'}, 'slow');
         		return true;
         	}
         	else {
-                // email.animate({backgroundColor:'pink'}, 'slow');
         		return false;
         	}
         }
