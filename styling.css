@@ -165,6 +165,21 @@ p.title {
 
 /*skills*/
 
+#logo-overview .row {
+   display: flex;
+   flex-direction: row;
+}
+
+#logo-overview [class^="col-"],
+#logo-overview [class*=" col-"] {
+    display: flex;
+    align-items: center;
+}
+
+#logo-overview img {
+    width: 75%;
+}
+
 #skill-page {
     position: relative;
 }
